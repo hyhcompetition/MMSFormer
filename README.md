@@ -12,14 +12,17 @@
 
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/multimodal-transformer-for-material/thermal-image-segmentation-on-pst900)](https://paperswithcode.com/sota/thermal-image-segmentation-on-pst900?p=multimodal-transformer-for-material)
 
+<a href="https://ieeexplore.ieee.org/document/10502124/">
+    <img src="https://img.shields.io/badge/Paper-IEEE OJSP-green" />
+</a>
 <a href="https://arxiv.org/pdf/2309.04001">
     <img src="https://img.shields.io/badge/arXiv-2309.04001-red" />
 </a>
-<a href="https://pytorch.org/">
-    <img src="https://img.shields.io/badge/Framework-PyTorch-orange.svg" />
-</a>
 <a href="https://csiplab.github.io/MMSFormer/">
     <img src="https://img.shields.io/badge/Project-Webpage-blue" />
+</a>
+<a href="https://pytorch.org/">
+    <img src="https://img.shields.io/badge/Framework-PyTorch-orange.svg" />
 </a>
 </div>
 
@@ -30,16 +33,17 @@ Leveraging information across diverse modalities is known to enhance performance
 For more details, please check our [arXiv](https://arxiv.org/abs/2309.04001) paper.
 
 ## Updates
-- [x] 09/2023: init repository.
-- [x] 09/2023: release the code for MMSFormer.
-- [x] 09/2023: release MMSFormer model weights. Download from [**GoogleDrive**](https://drive.google.com/drive/folders/1OPr7PUrL7hkBXogmHFzHuTJweHuJmlP-?usp=sharing).
-- [x] 01/2024: update code, description and pretrained weights.
+- [x] 09/2023: Init repository.
+- [x] 09/2023: Release the code for MMSFormer.
+- [x] 09/2023: Release MMSFormer model weights. Download from [**GoogleDrive**](https://drive.google.com/drive/folders/1OPr7PUrL7hkBXogmHFzHuTJweHuJmlP-?usp=sharing).
+- [x] 01/2024: Update code, description and pretrained weights.
+- [x] 04/2024: Accepted by [IEEE Open Journal of Signal Processing](https://ieeexplore.ieee.org/document/10502124).
 
 ## MMSFormer model
 
 <div align="center"> 
 
-![MMSFormer](figs/MMSFormer-v2.png)
+![MMSFormer](figs/MMSFormer-V2.png)
 **Figure:** Overall architecture of MMSFormer model and proposed fusion block.
 
 </div>
@@ -181,13 +185,16 @@ If you use MMSFormer model, please cite the following work:
 
 - **MMSFormer** [[**arXiv**](https://arxiv.org/abs/2309.04001)]
 ```
-@misc{reza2023MMSFormer,
-      title={MMSFormer: Multimodal Transformer for Material and Semantic Segmentation}, 
-      author={Md Kaykobad Reza and Ashley Prater-Bennette and M. Salman Asif},
-      year={2023},
-      eprint={2309.04001},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@ARTICLE{Reza2024MMSFormer,
+    author={Reza, Md Kaykobad and Prater-Bennette, Ashley and Asif, M. Salman},
+    journal={IEEE Open Journal of Signal Processing}, 
+    title={MMSFormer: Multimodal Transformer for Material and Semantic Segmentation}, 
+    year={2024},
+    volume={},
+    number={},
+    pages={1-12},
+    keywords={Image segmentation;Feature extraction;Transformers;Task analysis;Fuses;Semantic segmentation;Decoding;multimodal image segmentation;material segmentation;semantic segmentation;multimodal fusion;transformer},
+    doi={10.1109/OJSP.2024.3389812}
 }
 ```
 
