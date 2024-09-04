@@ -30,6 +30,6 @@ if __name__ == '__main__':
     modals = ['img', 'aolp', 'dolp', 'nir']
     model = MMSFormer('MMSFormer-B2', 25, modals)
     model.init_pretrained('checkpoints/pretrained/segformer/mit_b2.pth')
-    x = [torch.zeros(1, 3, 1024, 1024), torch.ones(1, 3, 1024, 1024), torch.ones(1, 3, 1024, 1024)*2, torch.ones(1, 3, 1024, 1024) *3]
+    x = [torch.zeros(1, 3, 512, 512), torch.ones(1, 3, 512, 512), torch.ones(1, 3, 512, 512)*2, torch.ones(1, 3, 512, 512) *3]
     y = model(x)
     print(y.shape)

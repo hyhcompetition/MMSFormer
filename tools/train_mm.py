@@ -42,8 +42,10 @@ def main(cfg, save_dir):
     wandb_name = cfg['WANDB_NAME']
     # gpus = int(os.environ['WORLD_SIZE'])
 
-    traintransform = get_train_augmentation(train_cfg['IMAGE_SIZE'], seg_fill=dataset_cfg['IGNORE_LABEL'])
-    valtransform = get_val_augmentation(eval_cfg['IMAGE_SIZE'])
+    # traintransform = get_train_augmentation(train_cfg['IMAGE_SIZE'], seg_fill=dataset_cfg['IGNORE_LABEL'])
+    # valtransform = get_val_augmentation(eval_cfg['IMAGE_SIZE'])
+    traintransform = None
+    valtransform = None
 
     trainset = eval(dataset_cfg['NAME'])(dataset_cfg['ROOT'], 'train', traintransform, dataset_cfg['MODALS'])
     valset = eval(dataset_cfg['NAME'])(dataset_cfg['ROOT'], 'val', valtransform, dataset_cfg['MODALS'])

@@ -259,7 +259,7 @@ mit_settings = {
 class MixTransformer(nn.Module):
     def __init__(self, model_name: str = 'B0', modality: str = 'depth'):
         super().__init__()
-        assert model_name in mit_settings.keys(), f"Model name should be in {list(cmnext_settings.keys())}"
+        assert model_name in mit_settings.keys(), f"Model name should be in {list(mit_settings.keys())}"
         # self.model_name = 'B2'
         self.model_name = model_name
         # TODO: Must comment the following line later
@@ -344,7 +344,7 @@ class MixTransformer(nn.Module):
 class MMSFormer(nn.Module):
     def __init__(self, model_name: str = 'B0', modals: list = ['rgb', 'depth', 'event', 'lidar']):
         super().__init__()
-        assert model_name in mit_settings.keys(), f"Model name should be in {list(cmnext_settings.keys())}"
+        assert model_name in mit_settings.keys(), f"Model name should be in {list(mit_settings.keys())}"
         embed_dims, depths = mit_settings[model_name]
         self.modals = modals[1:] if len(modals)>1 else []  
         self.num_modals = len(self.modals)

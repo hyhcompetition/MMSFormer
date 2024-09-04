@@ -377,6 +377,10 @@ def get_val_augmentation(size: Union[int, Tuple[int], List[int]]):
         Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
     ])
 
+def get_sarmsi_augmentation():
+    return Compose([
+        Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+    ])
 
 if __name__ == '__main__':
     h = 230
