@@ -55,7 +55,8 @@ def main(cfg, save_dir):
     resume_checkpoint = None
     if os.path.isfile(resume_path):
         resume_checkpoint = torch.load(resume_path, map_location=torch.device('cpu'))
-        msg = model.load_state_dict(resume_checkpoint['model_state_dict'])
+        model_state_dict = {key.replace('module.', ''): value for key, value in resume_checkpoint['model_state_dict'].items()}
+        msg = model.load_state_dict(model_state_dict)
         # print(msg)
         logger.info(msg)
     else:

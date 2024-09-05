@@ -9,19 +9,19 @@ MODEL:
   NAME          : MMSFormer                                         # name of the model you are using
   BACKBONE      : MMSFormer-B3                                      # model variant
   PRETRAINED    : 'checkpoints/pretrained/segformer/mit_b3.pth'     # backbone model's weight 
-  RESUME        : ''                                                # checkpoint file
+  RESUME        : 'output/MMSFormer/MMSF-FMB-RGBT/MMSFormer_MMSFormer-B3_SARMSI_epoch24_36.3_checkpoint.pth'                                                # checkpoint file
 
 DATASET:
   NAME          : SARMSI                                               # dataset name to be trained with (camvid, cityscapes, ade20k)
-  ROOT          : '/media/hyh/1A24C88B24C86AF9/MMSeg-YREB'                            # dataset root path
+  ROOT          : '../dataset/MMSeg-YREB'                            # dataset root path
   IGNORE_LABEL  : 255
   # MODALS        : ['img']
   MODALS        : ['sar', 'msi0', 'msi1', 'msi2', 'msi3']
 
 TRAIN:
   IMAGE_SIZE    : [256, 256]      # training image size in (h, w) === Fixed in dataloader, following MCubeSNet
-  BATCH_SIZE    : 2               # batch size used to train
-  EPOCHS        : 120             # number of epochs to train
+  BATCH_SIZE    : 14               # batch size used to train
+  EPOCHS        : 250             # number of epochs to train
   EVAL_START    : 0               # evaluation interval during training
   EVAL_INTERVAL : 1               # evaluation interval during training
   AMP           : true            # use AMP in training

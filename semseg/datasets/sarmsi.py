@@ -49,9 +49,9 @@ Low Vegetation, 5) Wetland, 6) Water, 7) Built-up, 8) Bare ground, 9) Snow.
         self.modals = modals
         if split == 'val':
             split = 'test'
-        self.SAR = os.path.join(root,split,"SAR")
-        self.MSI = os.path.join(root,split,"MSI")
-        self.Label = os.path.join(root,split,"label")
+        self.SAR = os.path.join(root,'train',"SAR")
+        self.MSI = os.path.join(root,'train',"MSI")
+        self.Label = os.path.join(root,'train',"label")
         self.datasplit = os.path.join(root,f"{split}.txt")
         with open(self.datasplit, "r") as f:
             self.files = f.read().splitlines()

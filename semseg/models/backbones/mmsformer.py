@@ -378,7 +378,7 @@ class MMSFormer(nn.Module):
         # Have extra modality
         if self.num_modals > 0:
             # Backbones and Fusion Block for extra modalities
-            self.extra_mit = nn.ModuleList([MixTransformer('B1', self.modals[i]) for i in range(self.num_modals)])
+            self.extra_mit = nn.ModuleList([MixTransformer('B3', self.modals[i]) for i in range(self.num_modals)])
             self.fusion_block = FusionBlock(self.channels, reduction=16, num_modals=self.num_modals+1)
      
     def forward(self, x: list) -> list:
